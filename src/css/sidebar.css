@@ -15,6 +15,7 @@
 		4.4 =SIGMA-9 OVERWRITES
 	5. =COMMON THEME COMPATABILITY
 	6. =MOBILE SIDEBAR
+	7. =LOCALIZATION FOR JP
   =============== */
 
 /* ===MAIN BLOCK=== */
@@ -611,23 +612,23 @@
 }
 
 /* Interwiki styling for Interwikis that cannot style themselves. Also targets the SCP-CN Interwiki, which is stylable but does not currently have the interwiki-stylable class */
-#side-bar div.scpnet-interwiki-wrapper:not(:lang(cn)):not(.interwiki-stylable),
-#side-bar div.scpnet-interwiki-wrapper:not(:lang(cn)):not(.interwiki-stylable) * {
+#side-bar div.scpnet-interwiki-wrapper:not(.interwiki-stylable),
+#side-bar div.scpnet-interwiki-wrapper:not(.interwiki-stylable) * {
 	max-width: var(--sidebar-width-on-desktop);
 }
 
-#side-bar div.scpnet-interwiki-wrapper:not(:lang(cn)):not(.interwiki-stylable) {
+#side-bar div.scpnet-interwiki-wrapper:not(.interwiki-stylable) {
 	position: relative;	
 }
 
-#side-bar div.scpnet-interwiki-wrapper:not(:lang(cn)):not(.interwiki-stylable) div.list-pages-item {
+#side-bar div.scpnet-interwiki-wrapper:not(.interwiki-stylable) div.list-pages-item {
 	display: flex;
 	align-items: flex-end;
 	justify-content: flex-end;
 	width: 100%;
 }
 
-#side-bar div.scpnet-interwiki-wrapper:not(:lang(cn)):not(.interwiki-stylable) p {
+#side-bar div.scpnet-interwiki-wrapper:not(.interwiki-stylable) p {
 	display: flex;
 	position: relative;
 	align-items: center;
@@ -636,7 +637,7 @@
 	overflow: hidden;
 }
 
-#side-bar .scpnet-interwiki-wrapper:not(:lang(cn)):not(.interwiki-stylable) iframe.scpnet-interwiki-frame {
+#side-bar .scpnet-interwiki-wrapper:not(.interwiki-stylable) iframe.scpnet-interwiki-frame {
 	position: relative;
 	width: 90%;
 	margin: 0 auto;
@@ -645,9 +646,9 @@
 
 /* Coloring to (mostly) match sidebar */
 @supports(mix-blend-mode:hue) {
-	#side-bar .scpnet-interwiki-wrapper:not(:lang(cn)):not(.interwiki-stylable)::before,
-	#side-bar .scpnet-interwiki-wrapper:not(:lang(cn)):not(.interwiki-stylable) p::before,
-	#side-bar .scpnet-interwiki-wrapper:not(:lang(cn)):not(.interwiki-stylable) p::after {
+	#side-bar .scpnet-interwiki-wrapper:not(.interwiki-stylable)::before,
+	#side-bar .scpnet-interwiki-wrapper:not(.interwiki-stylable) p::before,
+	#side-bar .scpnet-interwiki-wrapper:not(.interwiki-stylable) p::after {
 		content: "";
 		position: absolute;
 		top: 0;
@@ -657,19 +658,19 @@
 		pointer-events: none;
 	}
 
-	#side-bar .scpnet-interwiki-wrapper:not(:lang(cn)):not(.interwiki-stylable)::before {
+	#side-bar .scpnet-interwiki-wrapper:not(.interwiki-stylable)::before {
 		z-index: 3;
 		background-color: rgb(var(--swatch-menubg-color));
 		mix-blend-mode: darken;
 	}
 
-	#side-bar .scpnet-interwiki-wrapper:not(:lang(cn)):not(.interwiki-stylable) p::before {
+	#side-bar .scpnet-interwiki-wrapper:not(.interwiki-stylable) p::before {
 		z-index: 2;
 		background-color: rgb(var(--swatch-primary));
 		mix-blend-mode: color;
 	}
 
-	#side-bar .scpnet-interwiki-wrapper:not(:lang(cn)):not(.interwiki-stylable) p::after {
+	#side-bar .scpnet-interwiki-wrapper:not(.interwiki-stylable) p::after {
 		z-index: 1;
 		transition: background-color 500ms cubic-bezier(.4,0,.2,1);
 		background-color: rgb(var(--swatch-menubg-color));
@@ -1026,9 +1027,185 @@
 		pointer-events: auto;
 	}
 
-	#side-bar div.scpnet-interwiki-wrapper:not(:lang(cn)),
-	#side-bar div.scpnet-interwiki-wrapper:not(:lang(cn)) * {
+	#side-bar div.scpnet-interwiki-wrapper,
+	#side-bar div.scpnet-interwiki-wrapper * {
 		max-width: var(--sidebar-width-on-mobile);
 		margin-left: 0;
 	}
+}
+
+/* LOCALIZATION FOR JP */
+#side-bar hr {
+	margin-bottom: 0;
+}
+
+#side-bar div.side-block:not(.sns) div.menu-item {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+#side-bar div.menu-item a:only-of-type {
+	grid-column: 1/ span 2;
+	grid-row: 1;
+	justify-content: flex-start;
+}
+
+#side-bar div.menu-item span {
+	z-index: 2;
+	grid-column: 2;
+	grid-row: 1;
+	transition:
+		border-color 150ms cubic-bezier(.4,0,.2,1),
+		background-color 150ms cubic-bezier(.4,0,.2,1),
+		color 150ms cubic-bezier(.4,0,.2,1),
+		font-weight 200ms cubic-bezier(.4,0,.2,1),
+		font-variation-settings 200ms cubic-bezier(.4,0,.2,1)
+}
+
+#side-bar div.menu-item a:only-of-type:hover ~ span,
+#side-bar div.menu-item a:only-of-type:active ~ span {
+	--wght: var(--ui-hvr-wght);
+	border-color: rgb(var(--sidebar-links-hover-text-color),0.15);
+	color: rgb(var(--sidebar-links-hover-text-color));
+}
+
+#side-bar div.menu-item a:only-of-type:focus-within ~ span {
+	--wght: var(--ui-hvr-wght);
+	border-color: rgb(var(--sidebar-links-hover-text-color),0.15);
+	color: rgb(var(--sidebar-links-hover-text-color));
+}
+
+#side-bar div.menu-item .sub-text {
+	line-height: calc(var(--base-line-height)/1.5);
+	pointer-events: none;
+}
+
+#side-bar div.menu-item a[href*="sandbox2"],
+#side-bar div.menu-item span[style*="line-through"] a {
+	text-indent: 1em;
+}
+
+#side-bar div.menu-item a[href*="sandbox2"]::after,
+#side-bar div.menu-item span[style*="line-through"] a::after {
+	content: "|";
+	position: absolute;
+	left: 0;
+	transition:
+		color 150ms cubic-bezier(.4,0,.2,1),
+		font-weight 200ms cubic-bezier(.4,0,.2,1),
+		font-variation-settings 200ms cubic-bezier(.4,0,.2,1);
+	color: rgba(var(--sidebar-links-text),0.25)
+}
+
+#side-bar div.menu-item a[href*="sandbox2"]:hover::after,
+#side-bar div.menu-item a[href*="sandbox2"]:active::after,
+#side-bar div.menu-item span[style*="line-through"] a:hover::after,
+#side-bar div.menu-item span[style*="line-through"] a:active::after {
+	color: rgba(var(--sidebar-links-hover-text),0.25);
+}
+
+#side-bar div.menu-item span[style*="line-through"] {
+	display: contents;
+}
+
+#side-bar div.menu-item span[style*="line-through"] a {
+	text-decoration: line-through;
+}
+
+#side-bar .side-block.sns {
+	grid-auto-flow: column;
+	justify-content: space-evenly;
+	width: auto;
+	margin: .5rem 0.5rem 0 0;
+	padding: .5em !important;
+	background-color: rgba(var(--sidebar-media-bg-color)) !important;
+	direction: ltr;
+}
+
+#side-bar .side-block.sns > div,
+#side-bar .side-block.sns > div > div {
+	display: contents !important;
+}
+
+#side-bar .side-block.sns a {
+	position: relative;
+	width: 1.6875rem;
+	height: 1.6875rem;
+	margin: 0;
+	padding: 0;
+	transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+	border: none;
+	background-color: rgb(var(--social-color));
+	mask: var(--social-logo-mask) center center / contain no-repeat;
+}
+
+#side-bar .side-block.sns a::before {
+	--clip-path: 
+		polygon(
+			0 0, 
+			0 0, 
+			0 100%, 
+			0 100%
+		);
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: clip-path 200ms cubic-bezier(0.4, 0, 0.2, 1);
+	background-color: rgb(var(--social-icon-hover-color));
+	pointer-events: none;
+	clip-path: var(--clip-path);
+}
+
+#side-bar .side-block.sns a:hover::before,
+#side-bar .side-block.sns a:active::before {
+	--clip-path: 
+		polygon(
+			-15% 0, 
+			115% 0, 
+			100% 100%, 
+			0 100%
+		);
+}
+
+#side-bar .side-block.sns a:focus-within::before {
+	--clip-path: 
+		polygon(
+			-15% 0, 
+			115% 0, 
+			100% 100%, 
+			0 100%
+		);
+}
+
+#side-bar .side-block.sns a img {
+	width: 1.6875rem;
+	height: 1.6875rem;
+	opacity: 0;
+}
+
+#side-bar .side-block.sns a[href*="discord"] {
+	--social-logo-mask: var(--discord-mask);
+	--social-color: var(--discord-icon-color);
+}
+
+#side-bar .side-block.sns a[href*="twitter"] {
+	--social-logo-mask: var(--twitter-mask);
+	--social-color: var(--twitter-icon-color);
+}
+
+#side-bar .side-block[style*="fff0f0"] div.menu-item:last-of-type {
+	grid-template-columns: repeat(3, calc(100% / 3));
+}
+
+#side-bar .side-block[style*="fff0f0"] div.menu-item:last-of-type a {
+	grid-row: 1;
+}
+
+#side-bar div.scpnet-interwiki-wrapper iframe.scpnet-interwiki-frame {
+	margin: 0;
+	max-width: inherit;
+	width: 100%;
 }

@@ -10,6 +10,7 @@
 	4.  =HOVER BLOCKS
 	5.  =IMAGE BLOCK
 	6.  =RATING MODULE
+		6.1 =CREDIT MODULE FOR JP
 	7.  =TABLES
 	8.  =TOC
 	9.  =WARNING BOX
@@ -766,7 +767,7 @@ div.page-rate-widget-box .rate-points {
 }
 
 .page-rate-widget-box .rate-points .number {
-	font-size: calc((var(--base-font-size) * (14 / 15)) * 1.2);
+	font-size: 1.15em;
 }
 
 .page-rate-widget-box .rateup a,
@@ -1178,9 +1179,8 @@ div.page-rate-widget-box .rate-points {
 	will-change: border-color, box-shadow, color, background-color, font-weight, font-variation-settings;
 }
 
-
 [id*="u-credit"] div.credit-back::before {
-	content: "Back";
+	content: "戻る";
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1217,6 +1217,275 @@ div.page-rate-widget-box .rate-points {
 
 [id*="u-credit"] .page-rate-widget-box {
 	margin: 0;
+}
+
+	/* ===CREDIT MODULE FOR JP=== */
+#page-content .creditRate.creditModule .rate-box-with-credit-button {
+	align-items: inherit;
+	border: none;
+	flex-direction: inherit;
+	justify-content: inherit;
+	box-shadow: none;
+	height: inherit;
+	min-width: inherit;
+	overflow: inherit;
+}
+
+#page-content .creditRate.creditModule .rate-box-with-credit-button>.page-rate-widget-box {
+	background-color: rgb(var(--rating-module-bg-color));
+	border: 0.0625rem solid rgba(var(--swatch-border-color),.15);
+	border-bottom-width: 0;
+	box-shadow: 0 0.125rem 0 0 rgb(var(--rating-module-bottom-border-color));
+}
+
+#page-content div.page-rate-widget-box .rate-points,
+#action-area div.page-rate-widget-box .rate-points {
+	display: inline;
+	font-family: var(--UI-font);
+	font-size: 0.85em;
+	font-weight: var(--wght);
+}
+
+#page-content .page-rate-widget-box span,
+#action-area .page-rate-widget-box span {
+	box-sizing: inherit;
+	display: inline;
+	height: inherit;
+}
+
+#page-content .page-rate-widget-box .cancel,
+#action-area .page-rate-widget-box .cancel {
+	padding: 0;
+}
+
+#page-content .page-rate-widget-box .rateup a,
+#page-content .page-rate-widget-box .ratedown a,
+#action-area .page-rate-widget-box .rateup a,
+#action-area .page-rate-widget-box .ratedown a {
+	box-sizing: inherit;
+	display: block;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: var(--wght);
+	height: 100%;
+	padding: 0;
+}
+
+#page-content .page-rate-widget-box .cancel a,
+#action-area .page-rate-widget-box .cancel a {
+	color: transparent;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: var(--wght);
+	height: 100%;
+	padding: 0;
+}
+
+#page-content .page-rate-widget-box .rateup a::before,
+#page-content .page-rate-widget-box .ratedown a::before,
+#page-content .page-rate-widget-box .cancel a::before,
+#action-area .page-rate-widget-box .rateup a::before,
+#action-area .page-rate-widget-box .ratedown a::before,
+#action-area .page-rate-widget-box .cancel a::before {
+	content: " ";
+	font-size: inherit;
+}
+
+#page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton,
+.creditRate.creditModule .heritage-rating-module ~ .creditButton {
+	background-color: rgb(var(--rating-module-bg-color));
+	border: 0.0625rem solid rgba(var(--swatch-border-color),.15);
+	border-bottom-width: 0;
+	border-radius: 0;
+	box-shadow: 0 0.125rem 0 0 rgb(var(--rating-module-bottom-border-color));
+	display: block;
+	font-size: inherit;
+	height: var(--rating-module-height);
+	line-height: inherit;
+	margin-left: 0.5em;
+	width: calc((var(--base-font-size)*(14/15))*1.5);
+}
+
+#page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a,
+.creditRate.creditModule .heritage-rating-module ~ .creditButton a {
+	display: flex;
+	background-color: transparent;
+	color: rgb(var(--rating-module-text-color));
+	font-size: inherit;
+	width: 100%;
+	height: 100%;
+}
+
+#page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a::after,
+.creditRate.creditModule .heritage-rating-module ~ .creditButton a::after {
+	--clip-path:
+		polygon(
+			0 100%,
+			100% 115%,
+			100% 100%,
+			0 115%
+		);
+	content: " ";
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transition: clip-path 200ms cubic-bezier(0.4, 0, 0.2, 1);
+	pointer-events: none;
+	clip-path: var(--clip-path);
+}
+
+#page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a::after,
+.creditRate.creditModule .heritage-rating-module ~ .creditButton a::after {
+	background-color: rgba(var(--rating-module-text-color), 1);
+}
+
+#page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a:hover::after,
+#page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a:active::after,
+.creditRate.creditModule .heritage-rating-module ~ .creditButton a:hover::after,
+.creditRate.creditModule .heritage-rating-module ~ .creditButton a:active::after {
+	--clip-path:
+		polygon(
+			0 100%,
+			100% 115%,
+			100% 0,
+			0 -15%
+		);
+}
+
+#page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a:focus-within::after,
+.creditRate.creditModule .heritage-rating-module ~ .creditButton a:focus-within::after {
+	--clip-path:
+		polygon(
+			0 100%,
+			100% 115%,
+			100% 0,
+			0 -15%
+		);
+}
+
+#page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a::before,
+.creditRate.creditModule .heritage-rating-module ~ .creditButton a::before {
+	--mask-image: var(--credit-button-mask);
+	content: " ";
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: calc((var(--base-font-size) * (14 / 15)) * 1.5);
+	height: 100%;
+	transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+	background-color: rgb(var(--rating-module-text-color));
+	pointer-events: none;
+	mask: var(--mask-image) center center / calc(var(--rating-module-height) - 0.375em) no-repeat;
+}
+
+#page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a:hover::before,
+#page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a:active::before,
+.creditRate.creditModule .heritage-rating-module ~ .creditButton a:hover::before,
+.creditRate.creditModule .heritage-rating-module ~ .creditButton a:active::before {
+	background-color: rgb(var(--rating-module-text-hover-color));
+}
+
+#page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a:focus-within::before,
+.creditRate.creditModule .heritage-rating-module ~ .creditButton a:focus-within::before {
+	background-color: rgb(var(--rating-module-text-hover-color));
+}
+
+[id*=u-credit] .creditBottomRate,
+[id*=u-credit] .modalbox > .Dendo,
+[id*=u-credit] .modalbox-ratemodule {
+	position: static;
+}
+
+.creditRate.creditModule ~ [id*="u-credit"] .modalcontainer {
+	display: block;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	margin: auto;
+	min-width: inherit;
+	top: 0;
+	transform: unset;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.creditRate.creditModule ~ [id*=u-credit] div.modalbox {
+	aspect-ratio: 16 / 9;
+	max-width: 25rem !important;
+	min-height: inherit;
+}
+
+.creditRate.creditModule ~ [id*=u-credit] .modalbox .modalbox-title  {
+	border-radius: 0;
+}
+
+.creditRate.creditModule ~ [id*=u-credit] .modalbox .credit {
+	margin: 0 1rem;
+}
+
+.creditRate.creditModule ~ [id*=u-credit] .modalbox .credit.otherwise {
+	height: max-content;
+	overflow-y: auto;
+}
+
+.creditRate.creditModule ~ [id*="u-credit"] div.credit-back::before {
+	content: "クレジット";
+}
+
+.creditRate.creditModule ~ [id*=u-credit] div.creditBottomRate {
+	box-shadow: unset;
+}
+
+.creditRate.creditModule ~ [id*=u-credit] .credit-license a.cc {
+	color: rgb(var(--swatch-text-general));
+	font-size: 2em;
+	margin-right: 1rem;
+}
+
+/* Heritage Rating Module For JP */
+.creditRate.creditModule .heritage-rating-module,
+[id*="u-credit"] .Dendo .heritage-rating-module {
+	border-radius: 0;
+	box-shadow: 0 0.125rem 0 0 rgb(var(--rating-module-bottom-border-color));
+	display: inline-block;
+	float: none;
+	padding: 0 0.2rem;
+	vertical-align: inherit;
+}
+
+.creditRate.creditModule .heritage-rating-module .heritage-emblem,
+[id*="u-credit"] .Dendo .heritage-rating-module .heritage-emblem {
+	height: 1rem;
+	margin-right: 0.25rem;
+	position: static;
+	width: 1rem;
+}
+
+.creditRate.creditModule .heritage-rating-module .page-rate-widget-box,
+[id*="u-credit"] .Dendo .heritage-rating-module .page-rate-widget-box {
+	border: unset;
+}
+
+.creditRate.creditModule .heritage-rating-module ~ .creditButton {
+	padding: inherit;
+}
+
+.creditRate.creditModule ~ [id*="u-credit"] .modalbox.heritage {
+	border: rgb(var(--swatch-primary-darker)) solid 0.5rem;
+	border-radius: 0.5rem;
+}
+
+.creditRate.creditModule ~ [id*="u-credit"] .modalbox.heritage .modalbox-title {
+	background: linear-gradient(to bottom, rgba(var(--swatch-primary-darker), 1), rgba(var(--swatch-primary-darker), 0.7));
+	justify-content: center;
+}
+
+.creditRate.creditModule ~ [id*="u-credit"] .modalbox .modalbox-title.heritage h2::before {
+	display: none;
 }
 
 /* ===TABLES=== */
@@ -1417,7 +1686,7 @@ table[style*="margin:0"] * {
 }
 
 #toc #toc-action-bar a::after {
-	content: "Table of Contents";
+	content: "目次";
 	position: absolute;
 	left: 100%;
 	transition:
@@ -2205,6 +2474,14 @@ div.block-left {
 		width: 100% !important;
 	}
 
+	.image-block.scp-clear-true,
+	.scp-image-block.scp-clear-true {
+		float: none;
+		clear: both;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
 	blockquote,
 	.blockquote,
 	div.blockquote,
@@ -2233,7 +2510,7 @@ div.block-left {
 	}
 }
 
-/* See https://scp-wiki.wikidot.com/component:preview */
+/* See http://scp-jp.wikidot.com/component:preview */
 #page-content>div.preview {
 	display: none;
 }
