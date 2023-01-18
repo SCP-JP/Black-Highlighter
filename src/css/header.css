@@ -56,7 +56,7 @@ div#container-wrap {
 
 #header {
 	--search-width: calc(var(--base-font-size) * 15);
-	--search-height: calc(var(--base-font-size) * 1.8);
+	--search-height: calc(var(--base-font-size) * (27 / 15));
 	--account-height: var(--search-height);
 }
 
@@ -495,6 +495,16 @@ div#container-wrap {
 }
 
 #login-status #account-topbutton {
+	position: relative;
+	width: var(--account-height);
+	height: var(--account-height);
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	color: transparent;	
+}
+
+#login-status #account-topbutton::before {
 	--clip-path: 
 		polygon(
 			30% 35%, 
@@ -502,14 +512,12 @@ div#container-wrap {
 			50% 60%, 
 			50% 60%
 		);
-	position: relative;
-	width: var(--account-height);
-	height: var(--account-height);
-	margin: 0;
-	padding: 0;
+	content: " ";
+	position: absolute;
+	width: 100%;
+	height: 100%;
 	transition: clip-path 100ms cubic-bezier(0.4, 0, 0.2, 1);
 	background-color: rgb(var(--login-arrow-color));
-	color: transparent;
 	clip-path: var(--clip-path);
 }
 
@@ -635,7 +643,7 @@ div#container-wrap {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	font-size: calc(var(--base-font-size) * 0.765);
+	font-size: calc(var(--base-font-size) * (11 / 15));
 	pointer-events: none;
 }
 
@@ -703,7 +711,7 @@ div.mobile-top-bar {
 	margin: var(--header-height-on-desktop) 0 0 0;
 	padding: 0;
 	font-family: var(--UI-font, var(--header-font));
-	font-size: calc(var(--base-font-size) * 0.85);
+	font-size: calc(var(--base-font-size) * (13 / 15));
 	font-weight: var(--wght);
 }
 
@@ -978,7 +986,7 @@ div.mobile-top-bar {
 	border: 0rem solid rgba(0, 0, 0, 0);
 	background: rgba(var(--dropdown-links-bg-color));
 	color: rgb(var(--dropdown-links-color));
-	font-size: calc(var(--base-font-size) * (4 / 5));
+	font-size: calc(var(--base-font-size) * (13 / 15));
 	font-weight: var(--wght);
 	text-align: center;
 	white-space: nowrap;
@@ -1243,7 +1251,7 @@ div.mobile-top-bar {
     width: 2em;
     height: 2em;
     border-radius: 50%;
-    font-size: calc(var(--base-font-size) * 0.9);
+    font-size: calc(var(--base-font-size) * (13 / 15));
 }
 
 #top-bar > .ct-theme-switch .lightbulb,
