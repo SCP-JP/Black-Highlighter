@@ -24,7 +24,7 @@
  * Remove the margin in all browsers.
  */
 
- :where(body) {
+:where(body) {
 	margin: 0;
 }
 
@@ -42,7 +42,7 @@
 :where(h1, h2, h3, h4, h5, h6) {
 	margin: 0;
 	font-size: inherit;
-	font-weight: inherit;	
+	font-weight: inherit;
 }
 
 /* Lists (enumeration) */
@@ -74,12 +74,15 @@
  */
 
 :where(hr) {
-	box-sizing: content-box; /* 1 */
-	height: 0; /* 1 */
+	box-sizing: content-box;
+	/* 1 */
+	height: 0;
+	/* 1 */
 	margin: 0;
 	clear: both;
-	overflow: visible; /* 2 */
-	border-top-width: 1px;		
+	overflow: visible;
+	/* 2 */
+	border-top-width: 1px;
 	color: inherit;
 }
 
@@ -89,8 +92,10 @@
  */
 
 :where(pre) {
-	font-family: monospace, monospace; /* 1 */
-	font-size: inherit; /* 2 */
+	font-family: monospace, monospace;
+	/* 1 */
+	font-size: inherit;
+	/* 2 */
 }
 
 :where(address) {
@@ -107,7 +112,7 @@
 :where(a) {
 	background-color: transparent;
 	color: inherit;
-	text-decoration: none;	
+	text-decoration: none;
 }
 
 /**
@@ -116,14 +121,15 @@
  */
 
 :where(abbr[title]) {
-	text-decoration: underline dotted; /* 2 */
+	text-decoration: underline dotted;
+	/* 2 */
 }
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 
-:where(b,strong) {
+:where(b, strong) {
 	font-weight: bolder;
 }
 
@@ -133,8 +139,10 @@
  */
 
 :where(code, kbd, samp) {
-	font-family: monospace, monospace; /* 1 */
-	font-size: inherit; /* 2 */
+	font-family: monospace, monospace;
+	/* 1 */
+	font-size: inherit;
+	/* 2 */
 }
 
 /**
@@ -150,10 +158,10 @@
  * all browsers.
  */
 
-:where(sub,sup) {
+:where(sub, sup) {
 	position: relative;
 	font-size: 75%;
-	line-height: 0;	
+	line-height: 0;
 	vertical-align: baseline;
 }
 
@@ -186,7 +194,8 @@
  */
 
 :where(button, input, optgroup, select, textarea) {
-	-webkit-appearance: none; /* 1 */
+	-webkit-appearance: none;
+	/* 1 */
 	appearance: none;
 	margin: 0;
 	padding: 0;
@@ -195,7 +204,8 @@
 	color: inherit;
 	font: inherit;
 	text-align: inherit;
-	text-transform: inherit; /* 2 */
+	text-transform: inherit;
+	/* 2 */
 	vertical-align: middle;
 }
 
@@ -203,7 +213,7 @@
  * Correct cursors for clickable elements.
  */
 
- :where(button, [type="button"], [type="reset"], [type="submit"]) {
+:where(button, [type="button"], [type="reset"], [type="submit"]) {
 	cursor: pointer;
 }
 
@@ -215,7 +225,7 @@
  * Improve outlines for Firefox and unify style with input elements & buttons.
  */
 
- :where(:-moz-focusring) {
+:where(:-moz-focusring) {
 	outline: auto;
 }
 
@@ -238,7 +248,7 @@
 :where(fieldset) {
 	min-width: 0;
 	margin: 0;
-	padding: 0;	
+	padding: 0;
 }
 
 :where(legend) {
@@ -274,7 +284,8 @@ textarea {
  */
 
 :where([type="search"]) {
-	outline-offset: -2px; /* 1 */
+	outline-offset: -2px;
+	/* 1 */
 }
 
 /**
@@ -291,8 +302,10 @@ textarea {
  */
 
 :where(::-webkit-file-upload-button) {
-	-webkit-appearance: button; /* 1 */
-	font: inherit; /* 2 */
+	-webkit-appearance: button;
+	/* 1 */
+	font: inherit;
+	/* 2 */
 }
 
 /**
@@ -346,7 +359,8 @@ textarea {
 
 :where(table) {
 	border-collapse: collapse;
-	border-color: inherit; /* 1 */	
+	border-color: inherit;
+	/* 1 */
 }
 
 :where(caption) {
@@ -366,31 +380,35 @@ textarea {
 /* Sigma-9 Normalizer
 	 ========================================================================== */
 
+body {
+	text-size-adjust: inherit;
+}
+
+#interwiki body {
+	background-color: inherit;
+}
+
 #content-wrap {
 	position: inherit;
-	max-width: inherit;
-	height: inherit;
-	height: inherit;
-	min-height: inherit;
 	margin: inherit;
+	max-width: inherit;
+	min-height: inherit;
+	height: inherit;
+	height: inherit;
 }
 
 h1,
 #page-title {
-	margin: inherit;
-	padding-top: inherit;
 	color: inherit;
-}
-
-h1,
-#page-title,
-h1 {
 	padding: inherit;
+	margin: inherit;
 	font-weight: inherit;
 }
 
 h1 {
 	margin-top: inherit;
+	padding: inherit;
+	font-weight: inherit;
 }
 
 h2,
@@ -409,12 +427,8 @@ h7 {
 }
 
 ul {
-	list-style: inherit;
-}
 
-#top-bar ul {
-	right: inherit;
-	bottom: inherit;
+	list-style: inherit;
 }
 
 li,
@@ -423,25 +437,19 @@ p {
 }
 
 a {
-	background: inherit;
+	color: inherit;
 	text-decoration: inherit;
+	background: inherit;
 }
 
-a,
 a.newpage {
 	color: inherit;
-}
-
-a.newpage {
+	text-decoration: inherit;
 	background: inherit;
 }
 
-a.newpage,
 a:hover {
 	text-decoration: inherit;
-}
-
-a:hover {
 	background-color: inherit;
 }
 
@@ -451,10 +459,11 @@ a:hover {
 
 #header,
 #top-bar {
+	width: inherit;
 	max-width: inherit;
+	margin: inherit;
 }
 
-#header,
 #top-bar {
 	width: inherit;
 	margin: inherit;
@@ -463,42 +472,31 @@ a:hover {
 .mobile-top-bar {
 	display: inherit;
 	position: inherit;
-	z-index: inherit;
-	bottom: inherit;
 	left: inherit;
+	bottom: inherit;
+	z-index: inherit;
 }
 
 body {
 	background-color: inherit;
-	color: inherit;
 	font-size: inherit;
+	color: inherit;
 }
 
 div#container-wrap {
 	background: inherit;
 }
 
-sup {
-	top: inherit;
-	vertical-align: inherit;
-}
-
-sup,
 #header {
-	position: inherit;
-}
-
-#header {
-	z-index: inherit;
 	height: inherit;
+	position: inherit;
+	z-index: inherit;
 	padding-bottom: inherit;
-
 	background: inherit;
 }
 
 #search-top-box {
 	position: inherit;
-	z-index: inherit;
 	top: inherit;
 	right: inherit;
 	width: inherit;
@@ -507,177 +505,119 @@ sup,
 
 #search-top-box-input {
 	border: inherit;
-	-webkit-border-radius: inherit;
 	border-radius: inherit;
-}
-
-#search-top-box input.empty {
 	color: inherit;
-}
-
-#search-top-box-input,
-#search-top-box-input:hover,
-#search-top-box-input:focus {
 	background-color: inherit;
-	-webkit-box-shadow: inherit;
 	box-shadow: inherit;
-	color: inherit;
 }
 
 #search-top-box-input:hover,
 #search-top-box-input:focus {
 	border: inherit;
+	color: inherit;
+	background-color: inherit;
+	box-shadow: inherit;
 }
 
 #search-top-box-form input[type="submit"] {
-	padding: inherit;
 	border: inherit;
-	-webkit-border-radius: inherit;
 	border-radius: inherit;
-	background: inherit;
-	background-color: inherit;
-	-webkit-box-shadow: inherit;
-	box-shadow: inherit;
-	color: inherit;
+	padding: inherit;
 	font-size: inherit;
 	font-weight: inherit;
+	color: inherit;
+	background-color: inherit;
+	background: inherit;
+	box-shadow: inherit;
 	cursor: inherit;
 }
 
 #search-top-box-form input[type="submit"]:hover,
 #search-top-box-form input[type="submit"]:focus {
 	border: inherit;
-	background: inherit;
-	-webkit-box-shadow: inherit;
-	box-shadow: inherit;
 	color: inherit;
 	text-shadow: inherit;
+	background-color: inherit;
+	background: inherit;
+	box-shadow: inherit;
 }
 
 #login-status {
-	position: inherit;
-	z-index: inherit;
-	z-index: inherit;
-	top: inherit;
-	right: inherit;
-	overflow: inherit;
 	color: inherit;
 	font-size: inherit;
+	z-index: inherit;
 }
 
-#login-status a,
-#login-status ul a,
-#account-topbutton {
+#login-status a {
 	background: inherit;
 	color: inherit;
 }
 
-#login-status>a>strong {
-	-webkit-animation-name: inherit;
-	-webkit-animation-duration: inherit;
-	-webkit-animation-timing-function: inherit;
-	-webkit-animation-iteration-count: inherit;
-	text-decoration: inherit;
+#login-status ul a {
+	color: inherit;
+	background: inherit;
+}
+
+#account-topbutton {
+	background: inherit;
+	color: inherit;
 }
 
 .printuser img.small {
-	height: inherit;
 	margin-right: inherit;
-	vertical-align: inherit;
 }
 
-#account-options {
-	display: inherit;
-	position: inherit;
-	z-index: inherit;
-	right: inherit;
-	-moz-box-sizing: inherit;
-	box-sizing: inherit;
-	width: inherit;
-	padding: inherit;
-	border: inherit;
-	background-color: inherit;
-}
-
-#account-options ul {
-	display: inherit;
-	margin: inherit;
-	padding: inherit;
-	list-style: inherit;
-}
-
-#account-options li {
-	display: inherit;
-	margin: inherit;
-	padding: inherit;
-}
-
-#account-options li a {
-	display: inherit;
-	z-index: inherit;
-	-moz-box-sizing: inherit;
-	box-sizing: inherit;
-	padding: inherit;
-}
-
-#account-options li a:hover {
-	color: inherit;
-}
-
-#account-topbutton {
-	margin-left: inherit;
-	padding: inherit;
-	border: inherit;
-	background-color: inherit;
-	font-size: inherit;
-	font-weight: inherit;
-	text-decoration: inherit;
-}
-
-#header h1,
-#header h2 {
-	max-height: inherit;
+#header h1 {
 	margin-left: inherit;
 	padding: inherit;
 	float: inherit;
+	max-height: inherit;
 }
 
 #header h2 {
+	margin-left: inherit;
+	padding: inherit;
 	clear: inherit;
+	float: inherit;
 	font-size: inherit;
+	max-height: inherit;
 }
 
 #header h1 a {
+	display: inherit;
+	margin: inherit;
+	padding: inherit;
+	line-height: inherit;
+	max-height: inherit;
+	color: inherit;
 	background: inherit;
 	font-family: inherit;
 	font-size: inherit;
-	letter-spacing: inherit;
 	text-decoration: inherit;
+	text-shadow: inherit;
+	letter-spacing: inherit;
 }
 
-#header h1 a,
 #header h2 span {
 	display: inherit;
-	max-height: inherit;
 	margin: inherit;
 	padding: inherit;
-	color: inherit;
 	line-height: inherit;
-	text-shadow: inherit;
-}
-
-#header h2 span {
+	max-height: inherit;
 	font-weight: inherit;
+	color: inherit;
+	text-shadow: inherit;
+	text-shadow: inherit;
 }
 
 #top-bar {
 	position: inherit;
-	z-index: inherit;
 	top: inherit;
 	height: inherit;
-	padding: inherit;
-	font-size: inherit;
 	line-height: inherit;
+	padding: inherit;
+	z-index: inherit;
+	font-size: inherit;
 }
 
 #top-bar ul {
@@ -689,52 +629,50 @@ sup,
 }
 
 #top-bar a {
-	background: inherit;
 	color: inherit;
+	background: inherit;
 }
 
 #top-bar ul li {
-	position: inherit;
 	border: inherit;
+	position: inherit;
 }
 
 #top-bar ul li ul {
 	border: inherit;
-	border-top: inherit;
-	-webkit-box-shadow: inherit;
 	box-shadow: inherit;
-	width: inherit;
+	border-top: inherit;
 }
 
 #top-bar ul li a {
-	max-height: inherit;
+	border-left: inherit;
+	border-right: inherit;
+	text-decoration: inherit;
 	padding-top: inherit;
 	padding-bottom: inherit;
-	overflow: inherit;
-	border-right: inherit;
-	border-left: inherit;
 	line-height: inherit;
-	text-decoration: inherit;
+	max-height: inherit;
+	overflow: inherit;
 }
 
 #top-bar ul li.sfhover a,
 #top-bar ul li:hover a {
-	border-right: inherit;
-	border-left: inherit;
 	background: inherit;
 	color: inherit;
+	border-left: inherit;
+	border-right: inherit;
 }
 
 #top-bar ul li.sfhover ul li a,
 #top-bar ul li:hover ul li a {
+	border-width: inherit;
 	width: inherit;
+	border-top: inherit;
+	line-height: inherit;
 	height: inherit;
 	max-height: inherit;
 	padding-top: inherit;
 	padding-bottom: inherit;
-	border-top: inherit;
-	border-width: inherit;
-	line-height: inherit;
 }
 
 #top-bar ul li.sfhover a:hover,
@@ -744,14 +682,17 @@ sup,
 }
 
 #top-bar ul li ul {
+	border-width: inherit;
 	width: inherit;
 }
 
-#top-bar ul li ul,
 #top-bar ul li ul li,
 #top-bar ul li ul li.sfhover,
 #top-bar ul li ul li,
-#top-bar ul li ul li:hover,
+#top-bar ul li ul li:hover {
+	border-width: inherit;
+}
+
 #top-bar ul li ul li a {
 	border-width: inherit;
 }
@@ -771,29 +712,29 @@ sup,
 
 #side-bar {
 	margin: inherit;
-	display: inherit;
+	clear: inherit;
+	float: inherit;
 	position: inherit;
 	top: inherit;
 	left: inherit;
-	float: inherit;
-	clear: inherit;
+	width: inherit;
+	padding: inherit;
+	border: inherit;
+	display: inherit;
 }
 
-#side-bar,
+#interwiki .side-block {
+	margin: inherit;
+}
+
 #side-bar .side-block,
 #interwiki .side-block {
 	padding: inherit;
 	border: inherit;
-}
-
-#side-bar .side-block,
-#interwiki .side-block {
-	margin-bottom: inherit;
-	-webkit-border-radius: inherit;
 	border-radius: inherit;
-	background: inherit;
-	-webkit-box-shadow: inherit;
 	box-shadow: inherit;
+	background: inherit;
+	margin-bottom: inherit;
 }
 
 #side-bar .side-area {
@@ -802,34 +743,37 @@ sup,
 
 #side-bar .heading,
 #interwiki .heading {
+	color: inherit;
+	border-bottom: inherit;
+	padding-left: inherit;
 	margin-top: inherit;
 	margin-bottom: inherit;
-	padding-left: inherit;
-	border-bottom: inherit;
-	color: inherit;
 	font-size: inherit;
 	font-weight: inherit;
 }
 
 #side-bar p,
+#interwiki p {
+	margin: inherit;
+}
+
 #side-bar div.menu-item,
-#interwiki p,
-#interwiki div.menu-item {
+#interwiki .menu-item {
 	margin: inherit;
 }
 
 #side-bar div.menu-item img,
-#interwiki div.menu-item img {
-	position: inherit;
-	bottom: inherit;
+#interwiki .menu-item img {
 	width: inherit;
 	height: inherit;
-	margin-right: inherit;
 	border: inherit;
+	margin-right: inherit;
+	position: inherit;
+	bottom: inherit;
 }
 
 #side-bar div.menu-item a,
-#interwiki div.menu-item a {
+#interwiki .menu-item a {
 	font-weight: inherit;
 }
 
@@ -842,8 +786,8 @@ sup,
 }
 
 #side-bar div.menu-item .sub-text {
-	color: inherit;
 	font-size: inherit;
+	color: inherit;
 }
 
 #side-bar .collapsible-block-folded {
@@ -862,8 +806,8 @@ sup,
 #side-bar .collapsible-block-unfolded-link .collapsible-block-link {
 	margin-top: inherit;
 	margin-bottom: inherit;
-	color: inherit;
 	font-size: inherit;
+	color: inherit;
 }
 
 #side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
@@ -872,62 +816,23 @@ sup,
 }
 
 #side-bar ul {
-	padding: inherit;
 	list-style-type: inherit;
-}
-
-div.scpnet-interwiki-wrapper {
-	width: inherit;
-	margin-left: inherit;
-}
-
-iframe.scpnet-interwiki-frame {
-	border: inherit;
+	padding: inherit;
 }
 
 #main-content {
+	margin: inherit;
+	padding: inherit;
 	position: inherit;
-	margin: inherit;
-	padding: inherit;
 }
 
-#page-info-break {
-	height: 1px;
-	clear: both;
-	font-size: 1px;
-}
-
-#page-info {
-	margin: inherit;
-	clear: inherit;
-	font-size: inherit;
-	text-align: inherit;
-}
-
-.page-tags {
-	margin: inherit;
-	padding: inherit;
-	clear: inherit;
-	text-align: inherit;
-}
-
-.page-tags a {
-	margin: inherit;
-}
-
-.page-tags span {
-	padding-top: inherit;
-	border-top: inherit;
-	font-size: inherit;
+#main-content .page-tags a[href ^="/system:page-tags/tag/_"] {
+	display: inherit;
 }
 
 #breadcrumbs {
 	margin: inherit;
 	font-size: inherit;
-}
-
-.psuedocrumbs {
-	margin: inherit;
 }
 
 .yui-navset .yui-content {
@@ -954,16 +859,13 @@ iframe.scpnet-interwiki-frame {
 }
 
 .yui-navset .yui-nav,
-.yui-navset .yui-navset-top .yui-nav,
-.yui-navset .yui-nav,
 .yui-navset .yui-navset-top .yui-nav {
 	border-color: inherit;
 }
 
-.yui-navset .yui-nav li a em,
-.yui-navset-top .yui-nav li a em,
-.yui-navset-bottom .yui-nav li a em {
-	display: inherit;
+.yui-navset .yui-nav,
+.yui-navset .yui-navset-top .yui-nav {
+	border-color: inherit;
 }
 
 .yui-navset li {
@@ -972,100 +874,42 @@ iframe.scpnet-interwiki-frame {
 }
 
 #footer {
-	margin-top: inherit;
-	padding: inherit;
 	clear: inherit;
+	font-size: inherit;
 	background: inherit;
 	color: inherit;
-	font-size: inherit;
+	margin-top: inherit;
+	padding: inherit;
 }
 
 #footer .options {
-	display: inherit;
 	visibility: inherit;
-	width: inherit;
+	display: inherit;
 	float: inherit;
+	width: inherit;
 	font-size: inherit;
 	text-align: inherit;
 }
 
 #footer a {
+	color: inherit;
 	background: inherit;
-	color: inherit;
-}
-
-#footer p {
-	margin: inherit;
-	padding: inherit;
-}
-
-#license-area {
-	padding: inherit;
-	color: inherit;
-	text-align: inherit;
-}
-
-#toc {
-	border: inherit;
-	background-color: inherit;
-}
-
-#toc #toc-action-bar {
-	padding: inherit;
-}
-
-#toc .title {
-	margin: inherit;
-	font-weight: inherit;
-	text-align: inherit;
-}
-
-#revision-list .pager {
-	margin: initial;
-	text-align: initial;
-}
-
-.pager {
-	margin: initial;
-	text-align: initial;
-}
-
-.pager-no {
-	padding: initial;
-}
-
-.pager .dots {
-	margin: initial;
-	padding: initial;
-}
-
-.pager a {
-	margin: initial;
-	padding: initial;
-	border: initial;
-	text-decoration: initial;
-}
-
-.pager .current {
-	margin: initial;
-	padding: initial;
-	border: initial;
-	background-color: initial;
-	color: initial;
-	font-weight: initial;
 }
 
 div.sexy-box {
-	overflow: inherit;
 	background: inherit;
+	border: inherit;
+	padding: inherit;
+	margin: inherit;
+	overflow: inherit;
 }
 
-div.sexy-box,
 div.sexy-box div.image-container img {
 	margin: inherit;
 	padding: inherit;
 	border: inherit;
 }
+
 
 #page-content {
 	min-height: inherit;
@@ -1077,12 +921,10 @@ div.sexy-box div.image-container img {
 }
 
 .content-panel {
-	margin: inherit;
 	border: inherit;
-	-webkit-border-radius: inherit;
 	border-radius: inherit;
 	background-color: inherit;
-	-webkit-box-shadow: inherit;
+	margin: inherit;
 	box-shadow: inherit;
 	box-shadow: inherit;
 }
@@ -1092,18 +934,22 @@ div.sexy-box div.image-container img {
 }
 
 .content-panel.series {
-	margin-bottom: inherit;
 	padding: inherit;
+	margin-bottom: inherit;
 }
 
 .content-panel.centered {
 	text-align: inherit;
 }
 
-.content-panel.left-column,
-.content-panel.right-column {
-	width: inherit;
+.content-panel.left-column {
 	float: inherit;
+	width: inherit;
+}
+
+.content-panel.right-column {
+	float: inherit;
+	width: inherit;
 }
 
 .content-panel .panel-heading {
@@ -1122,6 +968,8 @@ div.sexy-box div.image-container img {
 .content-panel .panel-body {
 	padding: inherit;
 	background: inherit;
+
+
 }
 
 .content-panel .panel-footer {
@@ -1138,16 +986,14 @@ div.sexy-box div.image-container img {
 }
 
 .content-panel .content-toc {
-	margin: inherit;
-	padding: inherit;
 	float: inherit;
-	border: inherit;
-	-webkit-border-radius: inherit;
-	border-radius: inherit;
+	padding: inherit;
 	background-color: inherit;
-	-webkit-box-shadow: inherit;
-	box-shadow: inherit;
+	border: inherit;
+	border-radius: inherit;
+	margin: inherit;
 	white-space: inherit;
+	box-shadow: inherit;
 }
 
 .alternate:nth-child(even) {
@@ -1156,21 +1002,18 @@ div.sexy-box div.image-container img {
 
 .page-rate-widget-box {
 	display: inherit;
-	margin-right: inherit;
-	margin-bottom: inherit;
-	padding: inherit;
-	-webkit-border-radius: inherit;
 	border-radius: inherit;
-	-webkit-box-shadow: inherit;
 	box-shadow: inherit;
+	margin-bottom: inherit;
+	margin: inherit;
+	padding: inherit;
 }
 
 div.page-rate-widget-box .rate-points {
+	background-color: inherit;
 	border: inherit;
 	border-right: inherit;
-	-webkit-border-radius: inherit;
 	border-radius: inherit;
-	background-color: inherit;
 	color: inherit;
 	font-weight: inherit;
 	padding: inherit;
@@ -1178,18 +1021,18 @@ div.page-rate-widget-box .rate-points {
 
 .page-rate-widget-box .rateup,
 .page-rate-widget-box .ratedown {
+	background-color: inherit;
 	border-top: inherit;
 	border-bottom: inherit;
-	background-color: inherit;
 	font-weight: inherit;
 }
 
 .page-rate-widget-box .rateup a,
 .page-rate-widget-box .ratedown a {
-	margin: inherit;
-	padding: inherit;
 	background: inherit;
 	color: inherit;
+	padding: inherit;
+	margin: inherit;
 }
 
 .page-rate-widget-box .rateup a:hover,
@@ -1200,22 +1043,20 @@ div.page-rate-widget-box .rate-points {
 }
 
 .page-rate-widget-box .cancel {
+	background-color: inherit;
 	border: inherit;
 	border-left: inherit;
-	-webkit-border-radius: inherit;
 	border-radius: inherit;
-	background-color: inherit;
 }
 
 .page-rate-widget-box .cancel a {
 	background: inherit;
-	color: inherit;
 	text-transform: inherit;
+	color: inherit;
 	padding: inherit;
 }
 
 .page-rate-widget-box .cancel a:hover {
-	-webkit-border-radius: inherit;
 	border-radius: inherit;
 	background: inherit;
 	color: inherit;
@@ -1225,42 +1066,38 @@ div.page-rate-widget-box .rate-points {
 .heritage-rating-module {
 	float: inherit;
 	display: inherit;
-	-webkit-flex-direction: inherit;	
-	flex-direction: inherit;	
+	flex-direction: inherit;
 	vertical-align: inherit;
+	background-color: inherit;
 	padding: inherit;
 	border: inherit;
-	-webkit-border-radius: inherit;
 	border-radius: inherit;
 	box-shadow: inherit;
-	background-color: inherit;
 	margin: inherit;
 	margin-bottom: inherit;
 }
 
-.heritage-rating-module,
 .heritage-rating-module .page-rate-widget-box {
-	margin: inherit;
-	-webkit-box-shadow: inherit;
 	box-shadow: inherit;
+	margin: inherit;
 }
 
 .heritage-rating-module .heritage-emblem {
+	float: inherit;
 	position: inherit;
 	top: inherit;
 	left: inherit;
-	width: inherit;
 	height: inherit;
-	margin-right: inherit;
-	float: inherit;
+	width: inherit;
 	overflow: inherit;
+	margin-right: inherit;
 }
 
 .heritage-rating-module .heritage-emblem img {
 	width: inherit;
 	height: inherit;
 	border: inherit;
-}	
+}
 
 .rateBox {
 	display: inherit;
@@ -1279,8 +1116,8 @@ div.page-rate-widget-box .rate-points {
 
 #main-content .page-tags span {
 	display: inherit;
-	max-width: inherit;
 	padding: inherit;
+	max-width: inherit;
 }
 
 #main-content .page-tags a {
@@ -1289,17 +1126,21 @@ div.page-rate-widget-box .rate-points {
 }
 
 .scp-image-block {
-	width: inherit;
 	border: inherit;
-	-webkit-box-shadow: inherit;
 	box-shadow: inherit;
+	width: inherit;
 }
 
-.scp-image-block.block-right,
-.scp-image-block.block-left {
-	margin: inherit;
+.scp-image-block.block-right {
 	float: inherit;
 	clear: inherit;
+	margin: inherit;
+}
+
+.scp-image-block.block-left {
+	float: inherit;
+	clear: inherit;
+	margin: inherit;
 }
 
 .scp-image-block.block-center {
@@ -1308,18 +1149,18 @@ div.page-rate-widget-box .rate-points {
 }
 
 .scp-image-block img {
-	width: inherit;
 	border: inherit;
+	width: inherit;
 }
 
 .scp-image-block .scp-image-caption {
-	width: inherit;
-	padding: inherit;
-	border-top: inherit;
 	background-color: inherit;
+	border-top: inherit;
+	padding: inherit;
 	font-size: inherit;
 	font-weight: inherit;
 	text-align: inherit;
+	width: inherit;
 }
 
 .scp-image-block>p {
@@ -1332,6 +1173,7 @@ div.page-rate-widget-box .rate-points {
 }
 
 @media (max-width: 768px) {
+
 	.scp-clear-true.scp-image-block {
 		float: inherit;
 		clear: inherit;
@@ -1340,27 +1182,21 @@ div.page-rate-widget-box .rate-points {
 	}
 }
 
-.footer-wikiwalk-nav {
-	font-size: inherit;
-	font-weight: inherit;
+.forum-thread-box .description-block {
+	padding: inherit;
+	border-radius: inherit;
+	box-shadow: 0 1px 5px rgb(0 0 0 / 15%),
+		inset 0 1px 0 rgb(255 255 255 / 80%),
+		inset 0 10px 5px rgb(255 255 255 / 25%),
+		inset 0 -15px 30px rgb(0 0 0 / 10%);
 }
 
-.forum-thread-box .description-block,
 .thread-container .post .head {
 	padding: inherit;
-	-webkit-border-radius: inherit;
-	border-radius: inherit;
-	-webkit-box-shadow: inherit;
-	box-shadow: inherit;
-}
-
-.thread-container .post .head {
-	background: inherit;
 	background-color: inherit;
-}
-
-.post content {
-	word-wrap: inherit;
+	background: inherit;
+	box-shadow: inherit;
+	border-radius: inherit;
 }
 
 .signature {
@@ -1369,101 +1205,100 @@ div.page-rate-widget-box .rate-points {
 
 .ruby,
 ruby {
+	display: inherit;
+	text-align: inherit;
+	white-space: inherit;
+	line-height: inherit;
 	height: inherit;
 	vertical-align: inherit;
 }
 
-.ruby,
-ruby,
 .rt,
 rt {
 	display: inherit;
+	font-size: inherit;
 	line-height: inherit;
 	text-align: inherit;
 	white-space: inherit;
 }
 
-.rt,
-rt,
-.keycap {
-	font-size: inherit;
-}
-
 .keycap {
 	border: inherit;
-	border-bottom-width: inherit;
-	-webkit-border-radius: inherit;
-	border-radius: inherit;
 	border-color: inherit;
+	border-bottom-width: inherit;
+	border-radius: inherit;
+	border-radius: inherit;
 	background-color: inherit;
-	font-family: inherit;
-	white-space: inherit;
-}
-
-.keycap,
-.tags {
 	padding: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	white-space: inherit;
 }
 
 .tags {
 	display: inherit;
-	height: inherit;
 	margin: inherit;
-	-webkit-border-top-right-radius: inherit;
-	border-top-right-radius: inherit;
-	-webkit-border-bottom-right-radius: inherit;
-	border-bottom-right-radius: inherit;
+	padding: inherit;
+	height: inherit;
+	line-height: inherit;
+	font-size: inherit;
 	background: inherit;
 	color: inherit;
-	font-size: inherit;
-	line-height: inherit;
 	text-decoration: inherit;
+	-moz-border-radius-bottomright: inherit;
+	border-bottom-right-radius: inherit;
+	-moz-border-radius-topright: inherit;
+	border-top-right-radius: inherit;
 }
 
-.tags:before {
-	padding: inherit;
-	border-width: inherit;
-	border-style: inherit;
-	border-color: inherit;
-}
-
-.tags:before,
-.tags:after {
+.tags::before {
 	content: inherit;
+	padding: inherit;
+	float: inherit;
 	position: inherit;
 	top: inherit;
 	left: inherit;
 	width: inherit;
 	height: inherit;
-	float: inherit;
+	border-color: inherit;
+	border-style: inherit;
+	border-width: inherit;
 }
 
-.tags:after {
-	-webkit-border-radius: inherit;
+.tags::after {
+	content: inherit;
+	position: inherit;
+	top: inherit;
+	left: inherit;
+	float: inherit;
+	width: inherit;
+	height: inherit;
+	border-radius: inherit;
 	border-radius: inherit;
 	background: inherit;
-	-webkit-box-shadow: inherit;
+	box-shadow: inherit;
+	box-shadow: inherit;
 	box-shadow: inherit;
 }
 
 .bblock {
-	-webkit-transition: inherit;
-	-o-transition: inherit;
+	color: inherit;
+	background-color: inherit;
 	transition: inherit;
+	text-decoration: inherit;
 }
 
-.bblock,
-.bblock:hover,
-.dblock {
+.bblock:hover {
 	background-color: inherit;
 	color: inherit;
 	text-decoration: inherit;
 }
 
 .dblock {
-	-webkit-transition: inherit;
-	-o-transition: inherit;
+	color: inherit;
+	background-color: inherit;
 	transition: inherit;
+	text-decoration: inherit;
 }
 
 .dblock:hover {
@@ -1471,50 +1306,37 @@ rt,
 	text-decoration: inherit;
 }
 
+div.blockquote {
+	border: inherit;
+	background-color: inherit;
+	padding: inherit;
+	margin: inherit;
+}
+
+@media (max-width: 479px) {
+
+	div.blockquote {
+		margin: inherit;
+	}
+}
+
+@media (min-width: 480px) and (max-width: 580px) {
+
+	div.blockquote {
+		margin: inherit;
+	}
+}
+
 .emph {
-	-webkit-text-emphasis-style: inherit;
 	text-emphasis-style: inherit;
 }
 
-@document url-prefix() {
-	.emph {
-		padding: inherit;
-		background-clip: inherit;
-		background-color: inherit;
-		background-image: inherit;
-		background-repeat: inherit;
-		-webkit-background-size: inherit inherit;
-		background-size: inherit;
-
-		font-family: inherit;
-		font-style: inherit;
-		font-weight: inherit;
-	}
-}
-
-@media screen and (-ms-high-contrast: active),
-(-ms-high-contrast: none) {
-	.emph {
-		padding: inherit;
-		background-clip: inherit;
-		background-color: inherit;
-		background-image: inherit;
-		background-repeat: inherit;
-		-webkit-background-size: inherit inherit;
-		background-size: inherit;
-
-		font-family: inherit;
-		font-style: inherit;
-		font-weight: inherit;
-	}
-}
-
-@-ms-viewport {
+@viewport {
 	width: inherit;
 	zoom: inherit;
 }
 
-@-o-viewport {
+@viewport {
 	width: inherit;
 	zoom: inherit;
 }
@@ -1526,14 +1348,14 @@ rt,
 
 ::-webkit-scrollbar {
 	width: inherit;
-
 	height: inherit;
-
 	border: inherit;
-	border-round: inherit;
 }
 
-::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+	background: inherit;
+}
+
 ::-webkit-scrollbar-thumb {
 	background: inherit;
 }
@@ -1547,34 +1369,31 @@ embed,
 video,
 object,
 iframe,
-table,
-#page-content div,
-#page-content div table {
+table {
 	max-width: inherit;
 }
 
-table.form td,
-table.form th {
-	padding: inherit;
-	vertical-align: inherit;
+#page-content div,
+#page-content div table {
+	max-width: inherit;
 }
 
 #edit-page-comments {
 	width: inherit;
 }
 
-.change-textarea-size {
-	float: inherit;
-}
-
 @media (max-width: 767px) {
+
 	.owindow {
 		min-width: inherit;
 		max-width: inherit;
 	}
 
 	.modal-body .table,
-	.modal-body .table~div,
+	.modal-body .table~div {
+		float: inherit;
+	}
+
 	.owindow .button-bar {
 		float: inherit;
 	}
@@ -1583,20 +1402,12 @@ table.form th {
 		width: inherit;
 		float: inherit;
 	}
-
-	.mobile-top-bar ul li:last-of-type ul {
-		right: inherit;
-	}
-
-	span,
-	a {
-		word-break: inherit;
-	}
 }
 
+
 @media (max-width: 479px) {
+
 	#search-top-box-input {
-		display: inherit;
 		width: inherit;
 	}
 
@@ -1618,16 +1429,19 @@ table.form th {
 	}
 
 	#side-bar {
-		position: inherit;
 		width: inherit;
+		position: inherit;
 	}
 
-	.top-bar,
-	.mobile-top-bar {
+	.top-bar {
 		display: inherit;
 	}
 
-	.mobile-top-bar,
+	.mobile-top-bar {
+		display: inherit;
+		padding: inherit;
+	}
+
 	.page-options-bottom a {
 		padding: inherit;
 	}
@@ -1636,9 +1450,7 @@ table.form th {
 		font-size: inherit;
 	}
 
-	blockquote,
-	.blockquote,
-	div.blockquote {
+	blockquote {
 		margin: inherit;
 	}
 
@@ -1648,7 +1460,6 @@ table.form th {
 
 	#header {
 		background-position: inherit;
-		-webkit-background-size: inherit inherit;
 		background-size: inherit;
 	}
 
@@ -1659,12 +1470,10 @@ table.form th {
 
 	table.form td,
 	table.form th {
-		padding: inherit;
 		float: inherit;
-		vertical-align: inherit;
 	}
 
-	td.title, td.name {
+	td.title {
 		width: inherit;
 	}
 
@@ -1688,10 +1497,6 @@ table.form th {
 		clear: inherit;
 	}
 
-	#page-content div.title {
-		word-break: inherit;
-	}
-	
 	.heritage-rating-module {
 		padding: inherit;
 	}
@@ -1701,7 +1506,9 @@ table.form th {
 	}
 }
 
+
 @media (min-width: 480px) and (max-width: 580px) {
+
 	#search-top-box-input {
 		width: inherit;
 	}
@@ -1716,11 +1523,14 @@ table.form th {
 	}
 
 	#side-bar {
-		position: inherit;
 		width: inherit;
+		position: inherit;
 	}
 
-	.top-bar,
+	.top-bar {
+		display: inherit;
+	}
+
 	.mobile-top-bar {
 		display: inherit;
 	}
@@ -1733,9 +1543,7 @@ table.form th {
 		font-size: inherit;
 	}
 
-	blockquote,
-	.blockquote,
-	div.blockquote {
+	blockquote {
 		margin: inherit;
 	}
 
@@ -1745,7 +1553,6 @@ table.form th {
 
 	#header {
 		background-position: inherit;
-		-webkit-background-size: inherit inherit;
 		background-size: inherit;
 	}
 
@@ -1754,11 +1561,7 @@ table.form th {
 		margin-left: inherit;
 	}
 
-	#page-content div.title {
-		word-break: inherit;
-	}
-
-	td.title, td.name {
+	td.title {
 		width: inherit;
 	}
 
@@ -1776,12 +1579,12 @@ table.form th {
 
 @media (min-width: 581px) and (max-width: 767px) {
 
-	#search-top-box-input,
-	#side-bar {
+	#search-top-box-input {
 		width: inherit;
 	}
 
 	#side-bar {
+		width: inherit;
 		position: inherit;
 	}
 
@@ -1794,7 +1597,10 @@ table.form th {
 		max-width: inherit;
 	}
 
-	.top-bar,
+	.top-bar {
+		display: inherit;
+	}
+
 	.mobile-top-bar {
 		display: inherit;
 	}
@@ -1803,14 +1609,16 @@ table.form th {
 		padding: inherit;
 	}
 
-	#header h1 a,
+	#header h1 a {
+		font-size: inherit;
+	}
+
 	.license-area {
 		font-size: inherit;
 	}
 
 	#header {
 		background-position: inherit;
-		-webkit-background-size: inherit inherit;
 		background-size: inherit;
 	}
 
@@ -1820,7 +1628,9 @@ table.form th {
 	}
 }
 
+
 @media (min-width: 768px) and (max-width: 979px) {
+
 	#main-content {
 		margin: inherit;
 	}
@@ -1843,14 +1653,16 @@ table.form th {
 		padding: inherit;
 	}
 
-	#header h1 a,
+	#header h1 a {
+		font-size: inherit;
+	}
+
 	.license-area {
 		font-size: inherit;
 	}
 
 	#header {
 		background-position: inherit;
-		-webkit-background-size: inherit inherit;
 		background-size: inherit;
 	}
 
@@ -1876,6 +1688,7 @@ table.form th {
 }
 
 @media (max-width: 767px) {
+
 	.page-history tbody tr td:last-child {
 		width: inherit;
 	}
@@ -1886,7 +1699,10 @@ table.form th {
 	}
 
 	.modal-body .table,
-	.modal-body .table~div,
+	.modal-body .table~div {
+		float: inherit;
+	}
+
 	.owindow .button-bar {
 		float: inherit;
 	}
@@ -1909,54 +1725,61 @@ table.form th {
 		display: inherit;
 	}
 
-	#top-bar .open-menu a {
+	.open-menu a {
 		position: inherit;
-		z-index: inherit;
-		top: inherit;
 		bottom: inherit;
 		left: inherit;
-		width: inherit;
-		height: inherit;
-		border: inherit;
-		-webkit-border-radius: inherit;
-		border-radius: inherit;
-		background-color: inherit;
-		color: inherit;
+		z-index: inherit;
 		font-family: inherit;
 		font-size: inherit;
 		font-weight: inherit;
+		width: inherit;
+		height: inherit;
 		line-height: inherit;
 		text-align: inherit;
+		border: inherit;
+		background-color: inherit;
+		border-radius: inherit;
+		color: inherit;
 	}
 
-	#top-bar .open-menu a:hover {
-		-webkit-box-shadow: inherit;
-		box-shadow: inherit;
+	.open-menu a:hover {
 		text-decoration: inherit;
+		box-shadow: inherit;
+		box-shadow: inherit;
+		box-shadow: inherit;
+		box-shadow: inherit;
 	}
 
 	#main-content {
 		max-width: inherit;
 		margin: inherit;
-	}
-
-	#main-content,
-	#side-bar {
 		padding: inherit;
-		-webkit-transition: inherit;
-		-o-transition: inherit;
+		transition: inherit;
+		transition: inherit;
+		transition: inherit;
 		transition: inherit;
 	}
 
 	#side-bar {
 		display: inherit;
-		z-index: inherit;
+		position: inherit;
+		top: inherit;
 		left: inherit;
+		width: inherit;
+		height: inherit;
+		background-color: inherit;
 		overflow-y: inherit;
+		z-index: inherit;
+		padding: inherit;
+		transition: inherit;
+		transition: inherit;
+		transition: inherit;
+		transition: inherit;
 	}
 
-	#side-bar,
-	#side-bar:after {
+	#side-bar::after {
+		content: inherit;
 		position: inherit;
 		top: inherit;
 		width: inherit;
@@ -1964,17 +1787,13 @@ table.form th {
 		background-color: inherit;
 	}
 
-	#side-bar:after {
-		content: inherit;
-	}
-
 	#side-bar:target {
 		display: inherit;
-		z-index: inherit;
 		left: inherit;
 		width: inherit;
 		margin: inherit;
 		border: inherit;
+		z-index: inherit;
 	}
 
 	#side-bar:target+#main-content {
@@ -1984,23 +1803,21 @@ table.form th {
 	#side-bar:target .close-menu {
 		display: inherit;
 		position: inherit;
-		z-index: inherit;
-		top: inherit;
-		left: inherit;
 		width: inherit;
 		height: inherit;
+		top: inherit;
+		left: inherit;
 		background: inherit;
+		z-index: inherit;
 	}
 }
 
-@media (max-width: 479px) {
-	#search-top-box-input {
-		width: inherit;
-	}
+.post .content a {
+	word-wrap: inherit;
 }
 
-.colmod-block > ul,
-.colmod-block > ul > li {
+.colmod-block>ul,
+.colmod-block>ul>li {
 	display: inherit;
 	line-height: inherit;
 	list-style: inherit;
@@ -2008,30 +1825,32 @@ table.form th {
 	padding: inherit;
 }
 
-.colmod-block > ul > li > ul,
-li.folded > .colmod-link-top a + a,
-li.folded > .colmod-content,
-li.folded > .colmod-link-end a,
-li.unfolded > .colmod-link-top a:first-child {
+.colmod-block>ul>li>ul,
+li.folded>.colmod-link-top a+a,
+li.folded>.colmod-content,
+li.folded>.colmod-link-end a,
+li.unfolded>.colmod-link-top a:first-child {
 	display: inherit;
 }
 
 .colmod-content {
-	-webkit-animation: inherit;
 	animation: inherit;
-	-webkit-animation-timing-function: inherit;
+	animation: inherit;
+	animation-timing-function: inherit;
 	animation-timing-function: inherit;
 }
 
-li.folded > .colmod-content {
-	-webkit-animation-name: inherit;
+li.folded>.colmod-content {
+	animation-name: inherit;
 	animation-name: inherit;
 }
 
-@-webkit-keyframes colmod-fade-in {
+@keyframes colmod-fade-in {
 	from {
 		opacity: inherit;
-	} to {
+	}
+
+	to {
 		opacity: inherit;
 	}
 }
@@ -2039,28 +1858,40 @@ li.folded > .colmod-content {
 @keyframes colmod-fade-in {
 	from {
 		opacity: inherit;
-	} to {
+	}
+
+	to {
 		opacity: inherit;
 	}
 }
 
-[class|="colmod-link"] div.foldable-list-container {
+@keyframes colmod-fade-in {
+	from {
+		opacity: inherit;
+	}
+
+	to {
+		opacity: inherit;
+	}
+}
+
+[class |="colmod-link"] div.foldable-list-container {
 	display: inherit;
 }
 
-.colmod-collapsiblealt > [class|="colmod-link"] {
+.colmod-collapsiblealt>[class |="colmod-link"] {
 	margin: inherit;
 	text-align: inherit;
 }
 
-.colmod-collapsiblealt > [class|="colmod-link"],
-.collapsiblealt > .colmod-block > ul > li > [class|="colmod-link"] {
+.colmod-collapsiblealt>[class |="colmod-link"],
+.collapsiblealt>.colmod-block>ul>li>[class |="colmod-link"] {
 	margin: inherit;
 	text-align: inherit;
 }
 
-.colmod-collapsiblealt > [class|="colmod-link"] a,
-.collapsiblealt > .colmod-block > ul > li > [class|="colmod-link"] a {
+.colmod-collapsiblealt>[class |="colmod-link"] a,
+.collapsiblealt>.colmod-block>ul>li>[class |="colmod-link"] a {
 	padding: inherit;
 	text-decoration: inherit;
 	background-color: inherit;
@@ -2068,10 +1899,10 @@ li.folded > .colmod-content {
 	color: inherit;
 }
 
-.colmod-collapsiblealt > [class|="colmod-link"] a:hover,
-.colmod-collapsiblealt > [class|="colmod-link"] a:active,
-.collapsiblealt > .colmod-block > ul > li > [class|="colmod-link"] a:hover,
-.collapsiblealt > .colmod-block > ul > li > [class|="colmod-link"] a:active {
+.colmod-collapsiblealt>[class |="colmod-link"] a:hover,
+.colmod-collapsiblealt>[class |="colmod-link"] a:active,
+.collapsiblealt>.colmod-block>ul>li>[class |="colmod-link"] a:hover,
+.collapsiblealt>.colmod-block>ul>li>[class |="colmod-link"] a:active {
 	background: inherit;
 	text-decoration: inherit;
 }
@@ -2090,16 +1921,16 @@ li.folded > .colmod-content {
 	color: inherit;
 	border: inherit;
 }
- 
-#page-content .wikisys--template-dialog > .wikisys--template-dialog-header {
+
+#page-content .wikisys--template-dialog>.wikisys--template-dialog-header {
 	position: inherit;
 	line-height: inherit;
 	font-size: inherit;
 	font-weight: inherit;
 	padding: inherit;
 }
- 
-#page-content .wikisys--template-dialog > .wikisys--template-dialog-header::before {
+
+#page-content .wikisys--template-dialog>.wikisys--template-dialog-header::before {
 	content: inherit;
 	position: inherit;
 	top: inherit;
@@ -2110,25 +1941,25 @@ li.folded > .colmod-content {
 	border-radius: inherit;
 	background: inherit;
 }
- 
-#page-content .wikisys--template-dialog > .wikisys--template-dialog-content {
+
+#page-content .wikisys--template-dialog>.wikisys--template-dialog-content {
 	line-height: inherit;
 	margin: inherit;
 }
- 
-#page-content .wikisys--template-dialog > .wikisys--template-dialog-footer {
+
+#page-content .wikisys--template-dialog>.wikisys--template-dialog-footer {
 	font-size: inherit;
 	margin-top: inherit;
 }
- 
-#page-content .wikisys--template-dialog > .wikisys--template-dialog-infoarea {
+
+#page-content .wikisys--template-dialog>.wikisys--template-dialog-infoarea {
 	margin-top: inherit;
 }
 
 .inline-diff ins:first-of-type::before,
 .inline-diff del:first-of-type::before,
-.inline-diff br + ins::before,
-.inline-diff br + del::before {
+.inline-diff br+ins::before,
+.inline-diff br+del::before {
 	display: inherit;
 	font: inherit;
 	text-rendering: inherit;
@@ -2147,7 +1978,7 @@ li.folded > .colmod-content {
 	color: inherit;
 }
 
-.inline-diff ins + del::before,
-.inline-diff del + ins::before {
+.inline-diff ins+del::before,
+.inline-diff del+ins::before {
 	color: inherit;
 }

@@ -23,6 +23,7 @@
 		15.1 =CONTENT PANEL
 	16. =MOBILE ELEMENTS
 	17. =PRINT FORMATTING
+	18. =LOCALIZATION FOR JP
   =============== */
 
 /* ===TABVIEW=== */
@@ -33,12 +34,10 @@
 
 .yui-navset .yui-nav {
 	--clip-path:
-		polygon(
-			-0.0625rem -0.5rem,
+		polygon(-0.0625rem -0.5rem,
 			calc(100% + 0.0625rem) -0.5rem,
 			calc(100% + 0.0625rem) 100%,
-			-0.0625rem 100%
-		);
+			-0.0625rem 100%);
 	display: flex;
 	flex-wrap: wrap;
 	width: calc(100% - 0.125rem);
@@ -109,12 +108,10 @@
 
 .yui-navset .yui-nav a::before {
 	--clip-path:
-		polygon(
-			0 calc(100% - 0.25rem),
+		polygon(0 calc(100% - 0.25rem),
 			calc(100% + 1rem) calc(100% - 0.25rem),
 			calc(100% + 1rem) calc(100% + 1rem),
-			0 calc(100% + 1rem)
-		);
+			0 calc(100% + 1rem));
 	content: " ";
 	position: absolute;
 	z-index: 0;
@@ -134,23 +131,19 @@
 .yui-navset .yui-nav li:active a::before,
 .yui-navset .yui-nav li:focus a::before {
 	--clip-path:
-		polygon(
-			0 0,
+		polygon(0 0,
 			calc(100% + 1rem) -1rem,
 			calc(100% + 1rem) calc(100% + 1rem),
-			0 calc(100% + 1rem)
-		);
+			0 calc(100% + 1rem));
 	background-color: rgb(var(--tabs-hover-bg));
 }
 
 .yui-navset .yui-nav li:focus-within a::before {
 	--clip-path:
-		polygon(
-			0 0,
+		polygon(0 0,
 			calc(100% + 1rem) -1rem,
 			calc(100% + 1rem) calc(100% + 1rem),
-			0 calc(100% + 1rem)
-		);
+			0 calc(100% + 1rem));
 	background-color: rgb(var(--tabs-hover-bg));
 }
 
@@ -198,23 +191,19 @@
 .yui-navset .yui-nav .selected:focus a::before,
 .yui-navset .yui-nav .selected:active a::before {
 	--clip-path:
-		polygon(
-			0 0,
+		polygon(0 0,
 			calc(100% + 1rem) -1rem,
 			calc(100% + 1rem) calc(100% + 1rem),
-			0 calc(100% + 1rem)
-		);
+			0 calc(100% + 1rem));
 	background-color: rgb(var(--tabs-selected-bg));
 }
 
 .yui-navset .yui-nav .selected:focus-within a::before {
 	--clip-path:
-		polygon(
-			0 0,
+		polygon(0 0,
 			calc(100% + 1rem) -1rem,
 			calc(100% + 1rem) calc(100% + 1rem),
-			0 calc(100% + 1rem)
-		);
+			0 calc(100% + 1rem));
 	background-color: rgb(var(--tabs-selected-bg));
 }
 
@@ -697,12 +686,10 @@ div.blockquote> :last-child,
 .page-rate-widget-box .ratedown a::after,
 .page-rate-widget-box .cancel a::after {
 	--clip-path:
-		polygon(
-			0 100%,
+		polygon(0 100%,
 			100% 115%,
 			100% 100%,
-			0 115%
-		);
+			0 115%);
 	content: " ";
 	position: absolute;
 	z-index: -1;
@@ -734,24 +721,20 @@ div.blockquote> :last-child,
 .page-rate-widget-box .cancel a:hover::after,
 .page-rate-widget-box .cancel a:active::after {
 	--clip-path:
-		polygon(
-			0 100%,
+		polygon(0 100%,
 			100% 115%,
 			100% 0,
-			0 -15%
-		);
+			0 -15%);
 }
 
 .page-rate-widget-box .rateup a:focus-within::after,
 .page-rate-widget-box .ratedown a:focus-within::after,
 .page-rate-widget-box .cancel a:focus-within::after {
 	--clip-path:
-		polygon(
-			0 100%,
+		polygon(0 100%,
 			100% 115%,
 			100% 0,
-			0 -15%
-		);
+			0 -15%);
 }
 
 div.page-rate-widget-box .rate-points {
@@ -907,12 +890,10 @@ div.page-rate-widget-box .rate-points {
 
 #page-content .rate-box-with-credit-button>.creditButton>p>a::after {
 	--clip-path:
-		polygon(
-			0 100%,
+		polygon(0 100%,
 			100% 115%,
 			100% 100%,
-			0 115%
-		);
+			0 115%);
 	content: " ";
 	position: absolute;
 	z-index: 0;
@@ -931,22 +912,18 @@ div.page-rate-widget-box .rate-points {
 #page-content .rate-box-with-credit-button>.creditButton>p>a:hover::after,
 #page-content .rate-box-with-credit-button>.creditButton>p>a:active::after {
 	--clip-path:
-		polygon(
-			0 100%,
+		polygon(0 100%,
 			100% 115%,
 			100% 0,
-			0 -15%
-		);
+			0 -15%);
 }
 
 #page-content .rate-box-with-credit-button>.creditButton>p>a:focus-within::after {
 	--clip-path:
-		polygon(
-			0 100%,
+		polygon(0 100%,
 			100% 115%,
 			100% 0,
-			0 -15%
-		);
+			0 -15%);
 }
 
 #page-content .rate-box-with-credit-button>.creditButton>p>a::before {
@@ -1219,7 +1196,7 @@ div.page-rate-widget-box .rate-points {
 	margin: 0;
 }
 
-	/* ===CREDIT MODULE FOR JP=== */
+/* ===CREDIT MODULE FOR JP=== */
 #page-content .creditRate.creditModule .rate-box-with-credit-button {
 	align-items: inherit;
 	border: none;
@@ -1233,7 +1210,7 @@ div.page-rate-widget-box .rate-points {
 
 #page-content .creditRate.creditModule .rate-box-with-credit-button>.page-rate-widget-box {
 	background-color: rgb(var(--rating-module-bg-color));
-	border: 0.0625rem solid rgba(var(--swatch-border-color),.15);
+	border: 0.0625rem solid rgba(var(--swatch-border-color), .15);
 	border-bottom-width: 0;
 	box-shadow: 0 0.125rem 0 0 rgb(var(--rating-module-bottom-border-color));
 }
@@ -1292,9 +1269,9 @@ div.page-rate-widget-box .rate-points {
 }
 
 #page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton,
-.creditRate.creditModule .heritage-rating-module ~ .creditButton {
+.creditRate.creditModule .heritage-rating-module~.creditButton {
 	background-color: rgb(var(--rating-module-bg-color));
-	border: 0.0625rem solid rgba(var(--swatch-border-color),.15);
+	border: 0.0625rem solid rgba(var(--swatch-border-color), .15);
 	border-bottom-width: 0;
 	border-radius: 0;
 	box-shadow: 0 0.125rem 0 0 rgb(var(--rating-module-bottom-border-color));
@@ -1307,7 +1284,7 @@ div.page-rate-widget-box .rate-points {
 }
 
 #page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a,
-.creditRate.creditModule .heritage-rating-module ~ .creditButton a {
+.creditRate.creditModule .heritage-rating-module~.creditButton a {
 	display: flex;
 	background-color: transparent;
 	color: rgb(var(--rating-module-text-color));
@@ -1317,14 +1294,12 @@ div.page-rate-widget-box .rate-points {
 }
 
 #page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a::after,
-.creditRate.creditModule .heritage-rating-module ~ .creditButton a::after {
+.creditRate.creditModule .heritage-rating-module~.creditButton a::after {
 	--clip-path:
-		polygon(
-			0 100%,
+		polygon(0 100%,
 			100% 115%,
 			100% 100%,
-			0 115%
-		);
+			0 115%);
 	content: " ";
 	position: absolute;
 	z-index: 0;
@@ -1337,36 +1312,32 @@ div.page-rate-widget-box .rate-points {
 }
 
 #page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a::after,
-.creditRate.creditModule .heritage-rating-module ~ .creditButton a::after {
+.creditRate.creditModule .heritage-rating-module~.creditButton a::after {
 	background-color: rgba(var(--rating-module-text-color), 1);
 }
 
 #page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a:hover::after,
 #page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a:active::after,
-.creditRate.creditModule .heritage-rating-module ~ .creditButton a:hover::after,
-.creditRate.creditModule .heritage-rating-module ~ .creditButton a:active::after {
+.creditRate.creditModule .heritage-rating-module~.creditButton a:hover::after,
+.creditRate.creditModule .heritage-rating-module~.creditButton a:active::after {
 	--clip-path:
-		polygon(
-			0 100%,
+		polygon(0 100%,
 			100% 115%,
 			100% 0,
-			0 -15%
-		);
+			0 -15%);
 }
 
 #page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a:focus-within::after,
-.creditRate.creditModule .heritage-rating-module ~ .creditButton a:focus-within::after {
+.creditRate.creditModule .heritage-rating-module~.creditButton a:focus-within::after {
 	--clip-path:
-		polygon(
-			0 100%,
+		polygon(0 100%,
 			100% 115%,
 			100% 0,
-			0 -15%
-		);
+			0 -15%);
 }
 
 #page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a::before,
-.creditRate.creditModule .heritage-rating-module ~ .creditButton a::before {
+.creditRate.creditModule .heritage-rating-module~.creditButton a::before {
 	--mask-image: var(--credit-button-mask);
 	content: " ";
 	position: absolute;
@@ -1383,23 +1354,23 @@ div.page-rate-widget-box .rate-points {
 
 #page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a:hover::before,
 #page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a:active::before,
-.creditRate.creditModule .heritage-rating-module ~ .creditButton a:hover::before,
-.creditRate.creditModule .heritage-rating-module ~ .creditButton a:active::before {
+.creditRate.creditModule .heritage-rating-module~.creditButton a:hover::before,
+.creditRate.creditModule .heritage-rating-module~.creditButton a:active::before {
 	background-color: rgb(var(--rating-module-text-hover-color));
 }
 
 #page-content .creditRate.creditModule .rate-box-with-credit-button .creditButton a:focus-within::before,
-.creditRate.creditModule .heritage-rating-module ~ .creditButton a:focus-within::before {
+.creditRate.creditModule .heritage-rating-module~.creditButton a:focus-within::before {
 	background-color: rgb(var(--rating-module-text-hover-color));
 }
 
 [id*=u-credit] .creditBottomRate,
-[id*=u-credit] .modalbox > .Dendo,
+[id*=u-credit] .modalbox>.Dendo,
 [id*=u-credit] .modalbox-ratemodule {
 	position: static;
 }
 
-.creditRate.creditModule ~ [id*="u-credit"] .modalcontainer {
+.creditRate.creditModule~[id*="u-credit"] .modalcontainer {
 	display: block;
 	height: -webkit-fit-content;
 	height: -moz-fit-content;
@@ -1413,34 +1384,34 @@ div.page-rate-widget-box .rate-points {
 	width: fit-content;
 }
 
-.creditRate.creditModule ~ [id*=u-credit] div.modalbox {
+.creditRate.creditModule~[id*=u-credit] div.modalbox {
 	aspect-ratio: 16 / 9;
 	max-width: 25rem !important;
 	min-height: inherit;
 }
 
-.creditRate.creditModule ~ [id*=u-credit] .modalbox .modalbox-title  {
+.creditRate.creditModule~[id*=u-credit] .modalbox .modalbox-title {
 	border-radius: 0;
 }
 
-.creditRate.creditModule ~ [id*=u-credit] .modalbox .credit {
+.creditRate.creditModule~[id*=u-credit] .modalbox .credit {
 	margin: 0 1rem;
 }
 
-.creditRate.creditModule ~ [id*=u-credit] .modalbox .credit.otherwise {
+.creditRate.creditModule~[id*=u-credit] .modalbox .credit.otherwise {
 	height: max-content;
 	overflow-y: auto;
 }
 
-.creditRate.creditModule ~ [id*="u-credit"] div.credit-back::before {
+.creditRate.creditModule~[id*="u-credit"] div.credit-back::before {
 	content: "クレジット";
 }
 
-.creditRate.creditModule ~ [id*=u-credit] div.creditBottomRate {
+.creditRate.creditModule~[id*=u-credit] div.creditBottomRate {
 	box-shadow: unset;
 }
 
-.creditRate.creditModule ~ [id*=u-credit] .credit-license a.cc {
+.creditRate.creditModule~[id*=u-credit] .credit-license a.cc {
 	color: rgb(var(--swatch-text-general));
 	font-size: 2em;
 	margin-right: 1rem;
@@ -1470,21 +1441,21 @@ div.page-rate-widget-box .rate-points {
 	border: unset;
 }
 
-.creditRate.creditModule .heritage-rating-module ~ .creditButton {
+.creditRate.creditModule .heritage-rating-module~.creditButton {
 	padding: inherit;
 }
 
-.creditRate.creditModule ~ [id*="u-credit"] .modalbox.heritage {
+.creditRate.creditModule~[id*="u-credit"] .modalbox.heritage {
 	border: rgb(var(--swatch-primary-darker)) solid 0.5rem;
 	border-radius: 0.5rem;
 }
 
-.creditRate.creditModule ~ [id*="u-credit"] .modalbox.heritage .modalbox-title {
+.creditRate.creditModule~[id*="u-credit"] .modalbox.heritage .modalbox-title {
 	background: linear-gradient(to bottom, rgba(var(--swatch-primary-darker), 1), rgba(var(--swatch-primary-darker), 0.7));
 	justify-content: center;
 }
 
-.creditRate.creditModule ~ [id*="u-credit"] .modalbox .modalbox-title.heritage h2::before {
+.creditRate.creditModule~[id*="u-credit"] .modalbox .modalbox-title.heritage h2::before {
 	display: none;
 }
 
@@ -1839,7 +1810,7 @@ table[style*="margin:0"] * {
 	opacity: 0;
 	background-color: rgb(var(--toc-body-hover-arrow-color));
 	pointer-events: none;
-	mask: var(--right-arrow-mask) center 0.25rem /  0.3625em 1em no-repeat;
+	mask: var(--right-arrow-mask) center 0.25rem / 0.3625em 1em no-repeat;
 }
 
 #toc #toc-list a,
@@ -1989,11 +1960,9 @@ table[style*="margin:0"] * {
 
 .pager .current:not(:last-of-type)::before {
 	--clip-path:
-		polygon(
-			100% 0,
+		polygon(100% 0,
 			0 100%,
-			100% 100%
-		);
+			100% 100%);
 	left: -1.5em;
 	clip-path: var(--clip-path);
 }
@@ -2004,11 +1973,9 @@ table[style*="margin:0"] * {
 
 .pager .current:last-of-type::before {
 	--clip-path:
-		polygon(
-			0 0,
+		polygon(0 0,
 			0 100%,
-			100% 100%
-		);
+			100% 100%);
 	right: -1.5em;
 	clip-path: var(--clip-path);
 }
@@ -2045,12 +2012,10 @@ table[style*="margin:0"] * {
 
 .pager a::after {
 	--clip-path:
-		polygon(
-			0 100%,
+		polygon(0 100%,
 			100% 115%,
 			100% 100%,
-			0 115%
-		);
+			0 115%);
 	content: " ";
 	position: absolute;
 	z-index: -1;
@@ -2066,22 +2031,18 @@ table[style*="margin:0"] * {
 .pager a:hover::after,
 .pager a:active::after {
 	--clip-path:
-		polygon(
-			0 100%,
+		polygon(0 100%,
 			100% 115%,
 			100% 0,
-			0 -15%
-		);
+			0 -15%);
 }
 
 .pager a:focus-within::after {
 	--clip-path:
-		polygon(
-			0 100%,
+		polygon(0 100%,
 			100% 115%,
 			100% 0,
-			0 -15%
-		);
+			0 -15%);
 }
 
 /* ===WIKIDOT USER ICONS=== */
@@ -2274,13 +2235,11 @@ div.keycap {
 
 .tags {
 	--clip-path:
-		polygon(
-			0.5rem 0,
+		polygon(0.5rem 0,
 			100% 0,
 			100% 100%,
 			0.5rem 100%,
-			0 50%
-		);
+			0 50%);
 	--wght: 500;
 	display: inline;
 	position: relative;
@@ -2774,4 +2733,54 @@ body.print-body #main-content .page-tags span {
 		transition-timing-function: linear;
 		transition-delay: 0ms;
 	}
+}
+
+/* ===LOCALIZATION FOR JP=== */
+.colmod-block>ul>li>ul,
+li.folded>.colmod-link-top a+a,
+li.folded>.colmod-content,
+li.folded>.colmod-link-end a,
+li.unfolded>.colmod-link-top a:first-child {
+	display: none;
+}
+
+.colmod-content {
+	animation: fade-in .2s ease-in-out;
+	animation-timing-function: cubic-bezier(.3649610494, 0, .6350389506, 1);
+}
+
+li.folded > .colmod-content {
+	animation-name: none;
+}
+
+[class |="colmod-link"] div.foldable-list-container {
+	display: inline;
+}
+
+#page-content .wikisys--template-dialog {
+	margin: 1em 2rem;
+	padding: 2em;
+	border: .0625rem solid rgb(var(--swatch-menubg-medium-color));
+	border-radius: 2em;
+	background-color: rgb(var(--swatch-secondary-color));
+	color: rgb(var(--swatch-primary-darker)) !important;
+	clear: both;
+}
+
+#page-content .wikisys--template-dialog > .wikisys--template-dialog-header {
+	--wght: 800;
+	padding: .3125rem 0 .3152rem .375rem;
+	margin: 0 0 0 .375rem;
+	font-weight: var(--wght, revert);
+	font-size: 1.5em;
+	box-shadow: -.375rem 0 rgba(var(--swatch-menubg-medium-color), .2);
+}
+
+#page-content .wikisys--template-dialog > .wikisys--template-dialog-content {
+	margin: 1em 0;
+}
+
+#page-content .wikisys--template-dialog > .wikisys--template-dialog-footer {
+	font-size: .9em;
+	margin: 1em 0 0 0;
 }
