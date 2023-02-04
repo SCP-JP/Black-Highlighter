@@ -1,3 +1,5 @@
+@charset "utf-8";
+@import "../fonts/fonts.css";
 @import "./root.css";
 @import "./encoded-svgs.css";
 @import "./structure.css";
