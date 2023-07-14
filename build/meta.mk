@@ -1,18 +1,15 @@
 # Variables
 BUILD_SOURCES := \
-	$(wildcard build/*) \
-	cssnano.config.js
+	$(wildcard build/*)
 
 # Directory creation
 DIRECTORIES := \
+	dist/css/ \
 	dist/css/min/ \
+	dist/css/parts/ \
 	dist/fonts/ \
 	dist/fonts/int \
-	dist/fonts/int/chinese-simplified \
-	dist/fonts/int/chinese-traditional \
 	dist/fonts/int/japanese \
-	dist/fonts/int/korean \
-	dist/fonts/int/thai-vietnamese \
 	dist/img/ \
 	dist/img/page-toolbar-icons \
 	dist/img/text-editor-icons \
@@ -22,7 +19,7 @@ DIRECTORIES := \
 $(DIRECTORIES):
 	mkdir -p $@
 
-# npm rules
-node_modules: package.json package-lock.json
-	npm install
+# pnpm rules
+node_modules: package.json pnpm-lock.yaml
+	pnpm install
 	touch node_modules

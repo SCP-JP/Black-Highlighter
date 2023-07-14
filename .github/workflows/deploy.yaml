@@ -1,4 +1,4 @@
-name: 'Build'
+name: Build
 on:
   push:
     paths:
@@ -8,25 +8,74 @@ on:
       - 'src/**/*'
       - '.github/workflows/deploy.yaml'
 
+env:
+  BUCKET_PATH: theme/en/black-highlighter
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Cache
-        uses: actions/cache@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v3
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('package.json') }}
+          node-version: 19
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Build
         run: make
 
-      - name: Deploy
+      - name: Deploy (GitHub Pages)
         uses: JamesIves/github-pages-deploy-action@4.1.4
         if: ${{ github.ref == 'refs/heads/master' }}
         with:
           branch: gh-pages
           folder: dist
+
+      - name: Clean up for S3
+        run: make clean-up-s3
+
+      - name: Deploy (S3)
+        uses: emmiegit/s3-sync-action@main
+        if: ${{ github.ref == 'refs/heads/master' }}
+        with:
+          args: --delete
+        env:
+          AWS_S3_BUCKET: ${{ vars.AWS_S3_BUCKET }}
+          AWS_REGION: ${{ vars.AWS_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          SOURCE_DIR: dist
+          DEST_DIR: ${{ env.BUCKET_PATH }}
+
+      - name: Invalidate CloudFront
+        uses: chetan/invalidate-cloudfront-action@v2
+        if: ${{ github.ref == 'refs/heads/master' }}
+        env:
+          DISTRIBUTION: ${{ secrets.CF_DISTRIBUTION }}
+          PATHS: /${{ env.BUCKET_PATH }}
+          AWS_REGION: ${{ vars.AWS_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
