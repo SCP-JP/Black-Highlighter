@@ -461,7 +461,7 @@ div[id*="page-options-bottom"] {
 			&.btn {
 				--button-padding: calc(var(--icon-size) / 8);
 
-				flex-basis: 5rem;
+				flex-basis: auto;
 				height: 1.5em;
 				padding: var(--button-padding);
 				padding-left: calc(var(--icon-size) + 0.5em);
