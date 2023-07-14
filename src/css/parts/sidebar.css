@@ -1129,6 +1129,10 @@
 				}
 			}
 		}
+
+		& .sub-text {
+			pointer-events: none;
+		}
 	}
 
 	& div.scpnet-interwiki-wrapper {
