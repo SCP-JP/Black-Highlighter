@@ -989,6 +989,7 @@
 /* LOCALIZATION FOR JP */
 #side-bar {
 	& hr {
+		height: auto;
 		margin-bottom: 0;
 	}
 
@@ -999,18 +1000,13 @@
 		}
 
 		&.sns {
-			grid-auto-flow: column;
-			justify-content: space-evenly;
-			width: var(--sidebar-width-on-mobile);
-			margin: 0.5rem 0.5rem 0 0;
-			padding: 0.5em !important;
 			background-color: rgb(var(--sidebar-media-bg-color)) !important;
-			direction: ltr;
 
 			> div {
-				&,
-				& > div {
 					display: contents !important;
+
+				& > div {
+					border-left: none;
 				}
 			}
 
@@ -1049,12 +1045,12 @@
 					opacity: 0;
 				}
 
-				*[href*="discord"] {
+				&*[href*="discord"] {
 					--social-logo-mask: var(--discord-mask);
 					--social-color: var(--discord-icon-color);
 				}
 
-				*[href*="twitter"] {
+				&*[href*="twitter"] {
 					--social-logo-mask: var(--twitter-mask);
 					--social-color: var(--twitter-icon-color);
 				}
@@ -1080,7 +1076,6 @@
 				&:is(:hover, :active, :focus, :focus-within) {
 					~ span {
 						--wght: var(--ui-hvr-wght);
-
 						border-color: rgba(var(--sidebar-links-hover-text-color), 0.15);
 						color: rgb(var(--sidebar-links-hover-text-color));
 					}
@@ -1131,13 +1126,16 @@
 		}
 
 		& .sub-text {
+			line-height: calc(var(--base-line-height)/1.5);
 			pointer-events: none;
 		}
 	}
 
 	& div.scpnet-interwiki-wrapper {
+		& iframe.scpnet-interwiki-frame {
 		margin: 0;
 		max-width: inherit;
 		width: 100%;
+		}
 	}
 }
