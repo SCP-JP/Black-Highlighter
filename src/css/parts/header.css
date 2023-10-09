@@ -516,7 +516,7 @@ div#container-wrap {
 		position: absolute;
 		z-index: 12;
 		inset: 1.5rem 0 auto auto;
-		width: 10em;
+		width: 12em;
 		margin: 0.25em 0 0;
 		padding: 0;
 		overflow: hidden;

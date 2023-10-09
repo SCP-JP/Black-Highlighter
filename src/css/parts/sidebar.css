@@ -1005,7 +1005,7 @@
 			> div {
 					display: contents !important;
 
-				& > div {
+				&.menu-item > div {
 					border-left: none;
 				}
 			}
@@ -1045,12 +1045,12 @@
 					opacity: 0;
 				}
 
-				&*[href*="discord"] {
+				&[href*="discord"] {
 					--social-logo-mask: var(--discord-mask);
 					--social-color: var(--discord-icon-color);
 				}
 
-				&*[href*="twitter"] {
+				&[href*="twitter"] {
 					--social-logo-mask: var(--twitter-mask);
 					--social-color: var(--twitter-icon-color);
 				}
