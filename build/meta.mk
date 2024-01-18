@@ -19,7 +19,6 @@ DIRECTORIES := \
 $(DIRECTORIES):
 	mkdir -p $@
 
-# pnpm rules
-node_modules: package.json pnpm-lock.yaml
-	pnpm install
-	touch node_modules
+# bun rules
+node_modules: package.json bun.lockb
+	bun install
