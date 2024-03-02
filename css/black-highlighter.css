@@ -228,10 +228,10 @@
   --logo-image: url("../img/logo.svg");
   --header-title: "SCP財団";
   --header-subtitle: "確保、収容、保護";
-  --body-font: Inter, "M Plus 1p", sans-serif;
+  --body-font: Inter, "BIZ UDPGothic", "M Plus 1p", sans-serif;
   --UI-font: PTRootUI, sans-serif;
-  --header-font: var(--body-font);
-  --title-font: var(--body-font);
+  --header-font: Inter, "M Plus 1p", sans-serif;
+  --title-font: var(--header-font);
   --mono-font: Recursive, monospace;
   --min-font-size: .8125rem;
   --max-font-size: .9375rem;
