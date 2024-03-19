@@ -100,10 +100,10 @@
 	--header-subtitle: "確保、収容、保護";
 
 	/* ===TYPEFACES=== */
-	--body-font: Inter, "M Plus 1p", sans-serif;
+	--body-font: Inter, "BIZ UDPGothic", "M Plus 1p", sans-serif;
 	--UI-font: PTRootUI, sans-serif;
-	--header-font: var(--body-font);
-	--title-font: var(--body-font);
+	--header-font: Inter, "M Plus 1p", sans-serif;
+	--title-font: var(--header-font);
 	--mono-font: Recursive, monospace;
 
 	/* ===BASE FONT SIZE & LINE HEIGHT=== */
