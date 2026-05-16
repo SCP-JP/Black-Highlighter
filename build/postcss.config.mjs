@@ -1,35 +1,25 @@
 import fs from "fs";
 import path from "path";
-import postcss from "postcss";
+import postcssImport from "postcss-import";
 import postcssMixins from "postcss-mixins";
 import stylelint from "stylelint";
 import postcssLightningcss from "postcss-lightningcss";
 import reporter from "postcss-reporter";
-import { bundle } from "lightningcss";
-
-const lightningcssBundle = (opts = {}) => {
-	return {
-		postcssPlugin: "lightningcss-bundle",
-		Once(root, { result }) {
-			const filename = opts.filename || result.opts.from;
-			const { code } = bundle({
-				filename,
-				...opts.lightningcssOptions
-			});
-
-			root.removeAll();
-			const parsedCode = postcss.parse(code);
-			root.append(parsedCode);
-		}
-	};
-};
+import browserslist from "browserslist";
+import { browserslistToTargets } from "lightningcss";
 
 export default (ctx) => {
 	const nodeEnv = ctx.env;
 	const dev = nodeEnv === "development";
 
-	const browserslistpath = path.resolve(ctx.file.dirname, "../../.browserslistrc");
-	const browserslist = fs.readFileSync(browserslistpath, "utf8").trim();
+	const browserslistpath = path.resolve(
+		ctx.file.dirname,
+		"../../.browserslistrc"
+	);
+	const browserslistText = fs.readFileSync(browserslistpath, "utf8").trim();
+	const browserTargets = browserslistToTargets(
+		browserslist(browserslistText)
+	);
 
 	const stylelintOptions = {
 		configFile: path.join(ctx.cwd, "/.stylelintrc"),
@@ -40,16 +30,14 @@ export default (ctx) => {
 		mixinsDir: path.join(ctx.file.dirname, "/parts")
 	};
 
-	lightningcssBundle.postcss = true;
-
 	const lightningcssOptions = {
-		browsers: browserslist,
+		browsers: browserslistText,
 		lightningcssOptions: {
 			minify: !dev,
 			sourceMap: true,
 			cssModules: false,
+			targets: browserTargets,
 			drafts: {
-				nesting: true,
 				customMedia: true
 			},
 			visitor: {
@@ -68,9 +56,8 @@ export default (ctx) => {
 	};
 
 	const reporterOptions = {
-		formatter: input => {
-			return input.source + " produced " + input.messages.length + " messages \n";
-		},
+		formatter: (input) =>
+			`${input.source} produced ${input.messages.length} messages \n`,
 		clearMessages: true
 	};
 
@@ -80,8 +67,8 @@ export default (ctx) => {
 		case "production":
 		case "development":
 			plugins = [
+				postcssImport(), // Add postcss-import at the beginning
 				stylelint(stylelintOptions),
-				lightningcssBundle(lightningcssOptions),
 				postcssMixins(mixinOptions),
 				postcssLightningcss(lightningcssOptions),
 				reporter(reporterOptions)

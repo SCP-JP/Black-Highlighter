@@ -14,10 +14,10 @@
        alt="Black Highlighter Logo">
 </p>
 
-    [2019-2023 Wikidot Theme]
+    [2019-2026 Wikidot Theme]
     Designed by Woedenaz, Croquembouche, & djkaktus
     Built by Woedenaz, Croquembouche, aismallard & rounderhouse (for some reason)
-    Edited for SCP財団 by MikuKaneko, ukwhatn, Rokurokubi, 7happy7, C-take
+    Edited for SCP財団 by KanekoLiku, ukwhatn, Rokurokubi, 7happy7, C-take
 
 A base theme for the SCP Wiki utilizing more current CSS styling standards.
 * Preview (overwriting Sigma): https://scpwiki.com/scp-4999
